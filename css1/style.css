@@ -1,0 +1,11 @@
+li{
+    display: inline;
+}
+
+div{
+    background-color: red;
+}
+
+.main, .hero{
+    background-color: blueviolet;
+}
