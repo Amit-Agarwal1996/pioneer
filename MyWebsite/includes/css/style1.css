@@ -1,107 +1,34 @@
-/*
-
-My Custom CSS
-=============
-
-Author:  Brad Hussey
-Updated: August 2013
-Notes:	 Hand coded for Udemy.com
-
-*/
-
-
 /* --------------------------------------
-   Layout
+   Carsouel
    -------------------------------------- */
-#feature{
-    text-align: center;
+   #slider{
+       top: 60px;
+   }
 
-}
-feature img {
-    margin: 0 0 20px;
-}
-
-#inputMessage{
-    margin-bottom: 15px;
-}
-
-.wrap4{
-    width: 100%;
-    background-color: #e3e3e3;
-    text-align: center;
   
-}
-
-.wrap4 i:hover{
-
-    color: blue;
-}
-
-.wrap4 li{
-    
-    display: inline;
-    padding-top: 16px;
-    padding-right: 10px;
-   
-   
-}
 /* --------------------------------------
-   Typography
+  Cards
    -------------------------------------- */
-body{
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizelegibility;
+   
+   .card{
+    top: 20px;
+    height: 420px;
 }
 
-
-/* --------------------------------------
-   Navbar
-   -------------------------------------- */
-  
-   #searchInput{
-       width:200px;
-   }
-
-   .navbar-brand{
-       /* padding: 13px 15px; */
-       color: black;
-   }
-
-   .nav-collapse{
-       top: 0;
-   }
    
 /* --------------------------------------
-   Carousel
+   for all images
    -------------------------------------- */
-
-   #myCarousel{
-       margin-top: 60px;
-      
-   }
-   .carousel-caption{
-       font-size: 24px;
-   }
-
-   .carousel-caption h4{
-       font-size: 32px;
-   }
-   #myCarousel .item {
-       height:220px;
-
-   }
-   #slide1{
-       top:center no-repeat;
-   }
-
   
    .image{
-    /* top:10px; */
     width: 80%;
     height: 50%;
     padding: .10cm;
-    /* top:center; */
 }
+
+/* --------------------------------------
+   for hero image
+   -------------------------------------- */
 
     .hero{
         background-image: url("../../images/hero.jpg"); 
@@ -109,98 +36,19 @@ body{
          height: 300px;
         background-position: center; 
         text-align: center;
-        
-  
     }
     
     .hero h1{
         padding-top: 100px;
-    
     }
     
     .hero image1{
         width: 100%; 
-        height: 300px;
-        /* background-image: no-repeat;  */
-
-    
-    background-repeat: no-repeat;
+        height: 300px;     
     }
 
-   .footer h3{
-       padding-top: 20px;
-       padding-bottom: 0;
-   }
-
-.feature{
-    height: 400px;
-}
-/* --------------------------------------
-   Global Styles
-   -------------------------------------- */
-.tabbable  img.thumbail {
-    margin: 0 20px 10px 0;
-}
-
-
-/* --------------------------------------
-   Media Queries
-   -------------------------------------- */
-
-/* Portrait & landscape phone */
-/* @media (max-width: 480px) {
-	
-}
-
-/* Landscape phone to portrait tablet */
-
-@media (max-width: 768px) {
-	#myCarousel .item {
-        height:220px;
- 
-    }
-
-    .image{
-        /* top:10px; */
-        width: 60%;
-        height: 40%;
-        padding: .10cm;
-        top:center;
-    
-    }
-
-    .hero{
-       
-        width: 100%;
-        height: 40%;
-        background-position: center; 
-        text-align: center;
+  
         
-        
-    }
 
-    .hero h1{
-        font-size: 22px;
-        color: black;
-    }
-    
- .carousel-caption{
-     font-size: 16px;
- }
-	.carousel-caption h4{
-        font-size: 22px;
-    }
 
-    
-}
 
-/* Large desktop */
-@media (min-width: 1200px) {
-
-     #myCarousel .item {
-        height:400px;
- 
-    } 
-   
-	
-}
