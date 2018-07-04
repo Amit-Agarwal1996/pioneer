@@ -3,8 +3,13 @@
    -------------------------------------- */
    #slider{
        top: 60px;
+      
    }
 
+   .carousel-item{
+    top:center no-repeat;
+    height:600px;
+}
   
 /* --------------------------------------
   Cards
@@ -47,7 +52,18 @@
         height: 300px;     
     }
 
-  
+    /* --------------------------------------
+   Media Queries
+   -------------------------------------- */
+
+    @media (max-width: 768px) {
+    
+        .carousel-item{
+            top:center no-repeat;
+            height:220px;
+        }
+    }
+
         
 
 
