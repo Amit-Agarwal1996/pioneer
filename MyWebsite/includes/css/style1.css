@@ -127,8 +127,10 @@ body{
     background-repeat: no-repeat;
     }
 
- 
-
+   .footer h3{
+       padding-top: 20px;
+       padding-bottom: 0;
+   }
 
 .feature{
     height: 400px;
