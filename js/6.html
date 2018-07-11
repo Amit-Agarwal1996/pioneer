@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+
+    <script>
+//1
+var d = new Date();
+document.write( d.toString()+"<br>");
+
+//2
+
+var a=1,b=2,c=3,d=4,e=5;
+if (a>b && a>c && a>d && a>e)
+
+    document.write("Greatest no. is a"+"<br>");
+
+else if (b>a && b>c && b>d && b>e)
+    document.write("Greatest no. is b"+"<br>");
+
+else if (c>a && c>b && c>d && c>e)
+    document.write("Greatest no. is c"+"<br>");
+
+else if (d>a && d>c && d>b && d>e)
+    document.write("Greatest no. is d"+"<br>");
+
+else
+    document.write("Greatest no. is e"+"<br>");
+
+    //3
+
+    function ins(num){
+    const str = num.toString();
+    const res = [str[0]];
+  
+for(let x=1; x<str.length; x++)
+  {
+    if((str[x-1]%2 === 0) && (str[x]%2 === 0))
+      res.push('-', str[x]);
+
+    else
+      res.push(str[x]);
+  }
+return res.join('');
+
+}
+document.write(ins(12444345)+"<br>");
+
+//5
+
+var ft = ["Banana", "Orange", "Apple", "Mango"];
+
+document.write("ascending order is "+ft.sort()+"<br>");
+
+document.write( "decending order is "+ft.reverse()+"<br>");
+
+//4
+
+function dr(arr){
+for(var i = 0; i < arr.length; i++){
+if(arr[i] === arr[i+1])
+{
+arr.splice(arr[i+1], 1);
+}
+}
+return arr.join();
+}
+document.write(dr(['a','a',1,1,2,2,3,3,4,4,5,5])+"<br>");
+
+
+        //6 
+        function diff(arr1, arr2) {
+            var newArr = [];
+            var arr = arr1.concat(arr2);
+
+            for (var i in arr) {
+                var f = arr[i];
+                var t = 0;
+                for (j = 0; j < arr.length; j++) {
+                    if (arr[j] === f) {
+                        t++;
+                    }
+                }
+                if (t === 1) {
+                    newArr.push(f);
+                }
+            }
+            return newArr;
+        }
+
+        document.write(diff([1, 2, 3, 5, 6, 7], [1, 2, 3, 4, 5]));
+
+
+
+        // 7TH QUESTION
+
+        var library = [
+            { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254 },
+            { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264 },
+            { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245 }
+        ];
+        function sortByTitle(arr) {
+            return arr.sort(function (a, b) {
+                return a.title > b.title;
+            });
+        }
+
+        console.log(sortByTitle(library));
+
+
+        // 8TH QUESTION
+
+        function tm(email) {
+            var mail = /^\w+@[a-z A-Z_]+?\.[a-z A-Z]{2,3}$/;
+            var r = mail.test(email);
+            return r;
+        }
+
+        console.log(tm('amitt@gmail.com'));
+        console.log(tm('amitgmail.com'));
+
+
+        //9
+
+        var student = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12,
+        };
+
+        console.log(Object.keys(student));
+
+        //10
+
+        var students = [['David', 80], ['Vinoth', 77], ['Divya', 88], ['Ishitha', 95], ['Thomas', 68]];
+
+        var Avgmarks = 0;
+
+        for (var i = 0; i < students.length; i++) {
+            Avgmarks += students[i][1];
+
+        }
+        var avg = (Avgmarks / students.length);
+        console.log("Average Marks are: " + avg);
+
+        if (avg < 60)
+            console.log("Grade : F");
+
+        else if (avg < 70)
+            console.log("Grade : D");
+
+        else if (avg < 80)
+            console.log("Grade : C");
+
+        else if (avg < 90)
+            console.log("Grade : B");
+
+        else if (avg < 100)
+            console.log("Grade : A");
+
+
+        //11
+
+        function srt(str) {
+            return str.split('').sort().join('');
+        }
+        console.log(srt("webmaster"));
+
+        // 12
+
+        function r12(str, lett) {
+            var res = "";
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] === lett)
+                    res++
+            }
+            return res;
+        }
+
+        console.log(r12("amitaaah", "a"));
+
+        //13
+        
+        function flatten(arr) {
+        var a = arr.join(",");
+        return a;
+        }
+        console.log(flatten([1, [2], [3, [[4]]],[5,6]]));
+        
+        // 14
+
+        var myObj =
+            [
+            { 'name': 'Saurabh', 'age': 30, 'occupation': "Team Leader" },
+            { 'name': 'Anupriya', 'age': 32, 'occupation': "Team Leader" },
+            { 'name': 'Kalyani', 'age': 25, 'occupation': "Programmer" },
+            { 'name': 'Damodaran', 'age': 27, 'occupation': "Programmer" },
+            { 'name': 'Krishnakath', 'age': 22, 'occupation': "Programmer" },
+            { 'name': 'Venketraman', 'age': 28, 'occupation': "Programmer" }
+            ];
+        var t = 0;
+        for (var i = 0; i < myObj.length; i++) {
+            if (myObj[i].occupation == "Programmer")
+
+                console.log(myObj[i].name);
+
+        }
+
+        function srA(arr) {
+            return arr.sort(function (a, b) {
+                return a.age < b.age;
+            });
+        }
+
+        console.log(srA(myObj));
+
+        // var yrObj=[{ 'occupation' :  [{'name': , 'age': }]};
+        // for(var i=0;i<myObj.length;i++)
+        // { yrObj.occupation : myObj.occupation [{'name':myObj.name, 'age':myObj.age }]};
+
+        // consloe.log(yrObj);
+
+        // var yrObj=[][];
+        // var j=0;
+        // for(var i=0;i<myObj.length;i++)
+        //  {   
+        //      yrObj[i]=myObj.occupation;
+                 
+        //           yrObj[i][j]=myObj.name;
+        //           yrObj[i][j+1]=myObj.age;
+             
+        //  }
+        //  for(var i=0;i<myObj.length;i++)
+        //  {
+        //     for(var j=0;i<2;j++)
+        //        console.log(yrObj[i][j]);
+
+        //  }
+
+        const arrayToObject = (array) =>
+   array.reduce((obj, item) => {
+     obj[item.occupation] = item
+   },{})
+const yrObj = arrayToObject(myObj)
+console.log(yrObj)
+
+
+    function   myFunction() {
+            var ds=[];
+             myObj.map(data  => ds.push(data.name));
+             console.log(ds);
+        }
+
+       myFunction();
+
+
+        // 15
+        var jsonStr = '{"mike":"Book","jason":"sweater","chels":"iPad"}';
+
+        var obj = JSON.parse(jsonStr);
+        console.log(obj.mike);
+        console.log(obj.jason);
+        console.log(obj.chels);
+      
+       
+
+        //16
+        var obj = {
+            "One": "1",
+            "Two": "2",
+            "Three": "3",
+            "Four": "4"
+        }
+
+        console.log(Object.values(obj));
+
+    </script>
+
+</body>
+
+</html>
