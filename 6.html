@@ -212,17 +212,35 @@
 
         console.log(srA(myObj));
 
-        // var yrObj=[{ 'occupation' :  [{'name': , 'age': }]};
-        // for(var i=0;i<myObj.length;i++)
-        // { yrObj.occupation : myObj.occupation [{'name':myObj.name, 'age':myObj.age }]};
+   var newObj = {}
 
-        // consloe.log(yrObj);
-console.log(myObj.name); 
-
-        function myFunction() {
-           return myObj.name;
+        // Creating object with 'occupation' father node
+        for (var z of myObj) {
+            newObj[z['occupation']] = [];
         }
 
+        // Pushing each child to it's corresponding father node
+        for (var z of myObj) {
+            newObj[z['occupation']].push(z);
+        }
+
+        // Deleting the redundant 'occupation' child-node from the new object
+        for (var k in newObj) {
+            for (var l of newObj[k]) {
+                delete l['occupation']
+            }
+        }
+        console.log(newObj);
+
+
+        function myFunction() {
+
+            var name = []
+            myObj.map(data => name.push(data.name));
+            console.log(name);
+        }
+
+        myFunction();
         var map1 = myObj.map(myFunction);
          console.log(map1);
 
